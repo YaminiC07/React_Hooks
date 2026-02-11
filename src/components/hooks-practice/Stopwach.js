@@ -23,13 +23,32 @@ function Stopwatch() {
   };
 
   return (
-    <div>
-      <h2>{time} seconds</h2>
-      <button onClick={start}>Start</button>
-      <button onClick={stop}>Stop</button>
-      <button onClick={reset}>Reset</button>
+    <div style={styles.container}>
+      <div style={styles.box}>
+        <h2>{time} seconds</h2>
+        <button onClick={start}>Start</button>
+        <button onClick={stop}>Stop</button>
+        <button onClick={reset}>Reset</button>
+      </div>
     </div>
   );
 }
+
+const styles = {
+  container: {
+    backgroundColor: "black",
+    height: "100vh",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  box: {
+    backgroundColor: "white",
+    padding: "25px",
+    borderRadius: "10px",
+    textAlign: "center",
+    boxShadow: "0 0 10px gray",
+  },
+};
 
 export default Stopwatch;

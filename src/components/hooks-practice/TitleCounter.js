@@ -8,11 +8,29 @@ function TitleCounter() {
   }, [count]);
 
   return (
-    <div>
-      <h2>{count}</h2>
-      <button onClick={() => setCount(count + 1)}>+1</button>
+    <div style={styles.container}>
+      <div style={styles.box}>
+        <h2>{count}</h2>
+        <button onClick={() => setCount(count + 1)}>+1</button>
+      </div>
     </div>
   );
 }
+
+const styles = {
+  container: {
+    backgroundColor: "black",
+    height: "100vh",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  box: {
+    backgroundColor: "white",
+    padding: "20px",
+    borderRadius: "10px",
+    textAlign: "center",
+  },
+};
 
 export default TitleCounter;
